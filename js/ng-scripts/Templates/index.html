@@ -1,0 +1,33 @@
+﻿<div class="angularmodule">
+    <ul>
+        <li class="panel panel-success" ng-show="vm.EditMode">
+            <div class="panel-heading">
+                <h3>{{vm.localize.NewItem_Text}}</h3>
+                <div class="btn-group btn-group-xs pull-right" role="group">
+                    <a class="btn btn-add" ng-click="vm.showAdd()" href="javascript:void(0);">{{vm.localize.AddItem_Text}}</a>
+                </div>
+            </div>
+            
+        </li>
+    </ul>
+    <div>
+        <ul ui-sortable="vm.sortableOptions" ng-model="vm.Items">
+            <li class="panel panel-success" ng-repeat="item in vm.Items" ng-style="{cursor: vm.EditMode ? 'move' : 'auto'}">
+                <div class="panel-heading">
+                    <h3><span class="angularmodule-id">#{{item.ItemId}}</span> {{item.Title}}</h3>
+                    <div class="btn-group btn-group-xs pull-right" role="group">
+                        <a class="btn btn-xs btn-edit" ng-click="vm.showEdit(item, $index)" ng-show="vm.EditMode" href="javascript:void(0);">{{vm.localize.EditItem_Text}}</a>
+                        <a class="btn btn-xs btn-delete" ng-click="vm.deleteItem(item, $index)" ng-show="vm.EditMode" href="javascript:void(0);">{{vm.localize.DeleteItem_Text}}</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    {{item.Description}}
+                </div>
+                <div class="panel-footer">
+                    <span><b><span class="glyphicon glyphicon-user"/></b> {{item.AssignedUserName}}</span>
+                    <span class="pull-right"><b><span class="glyphicon glyphicon-calendar"/></b> {{item.CreatedOnDate| date:'short'}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

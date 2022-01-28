@@ -1,0 +1,153 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="Aricie.DigitalDisplays" type="Module" version="1.0.0">
+  <friendlyName>Aricie - DigitalDisplays</friendlyName>
+  <description />
+  <iconFile>/Images/icon_extensions_32px.png</iconFile>
+  <owner>
+    <name>Aricie</name>
+    <organization>Aricie</organization>
+    <url>https://aricie.com</url>
+    <email>support@aricie.fr</email>
+  </owner>
+  <license>La licence de ce paquet n'est pas actuellement inclue avec les fichiers d'installation, merci ce contacter le fournisseur pour des détails complets sur la licence.</license>
+  <releaseNotes />
+  <components>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>Aricie.DigitalDisplays</moduleName>
+        <foldername>Aricie.DigitalDisplays</foldername>
+        <businessControllerClass />
+        <supportedFeatures />
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>Aricie.DigitalDisplays</friendlyName>
+            <definitionName>Aricie.DigitalDisplays</definitionName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/Aricie.DigitalDisplays/View.html</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+              <moduleControl>
+                <controlKey>Settings</controlKey>
+                <controlSrc>DesktopModules/Aricie.DigitalDisplays/Settings.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>Edit</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>True</supportsPopUps>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+    </component>
+    <component type="Assembly">
+      <assemblies>
+        <basePath>bin</basePath>
+        <assembly>
+          <name>Aricie.DNN.Modules.DigitalDisplays.dll</name>
+        </assembly>
+      </assemblies>
+    </component>
+    <component type="File">
+      <files>
+        <basePath>DesktopModules\Aricie.DigitalDisplays</basePath>
+        <file>
+          <path>App_LocalResources</path>
+          <name>SharedResources.resx</name>
+        </file>
+        <file>
+          <path>Content</path>
+          <name>ngDialog-theme-default.css</name>
+        </file>
+        <file>
+          <path>Content</path>
+          <name>ngDialog.css</name>
+        </file>
+        <file>
+          <path>Content</path>
+          <name>ngDialog.min.css</name>
+        </file>
+        <file>
+          <path>css</path>
+          <name>ngProgress.css</name>
+        </file>
+        <file>
+          <path>js\ng-scripts</path>
+          <name>app.js</name>
+        </file>
+        <file>
+          <path>js\ng-scripts\Controller</path>
+          <name>itemController.js</name>
+        </file>
+        <file>
+          <path>js\ng-scripts\Service</path>
+          <name>itemService.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>angular-route.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>angular-route.min.js</name>
+        </file>
+        <file>
+          <path>Scripts\angular-ui</path>
+          <name>sortable.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>angular.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>angular.min.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>angular.min.js.map</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>angular-route.min.js.map</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>ngDialog.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>ngDialog.min.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>ngprogress.js</name>
+        </file>
+        <file>
+          <path>Scripts</path>
+          <name>ngprogress.min.js</name>
+        </file>
+        <file>
+          <name>module.css</name>
+        </file>
+        <file>
+          <name>Settings.ascx</name>
+        </file>
+        <file>
+          <name>View.html</name>
+        </file>
+      </files>
+    </component>
+  </components>
+</package></packages>
+</dotnetnuke>
