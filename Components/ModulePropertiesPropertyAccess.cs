@@ -6,6 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Resources;
 using System.Web;
+using System.Xml;
+using System.Xml.Serialization;
+using Aricie.DigitalDisplays.Components.Entities;
+using Aricie.DigitalDisplays.Components.Settings;
+using DotNetNuke.Common;
 using DotNetNuke.Entities.Modules;
 using DotNetNuke.Entities.Portals;
 using DotNetNuke.Entities.Users;
@@ -19,6 +24,20 @@ namespace Aricie.DigitalDisplays.Controller
     public class ModulePropertiesPropertyAccess : IPropertyAccess
     {
         private ModuleInstanceContext _moduleContext;
+
+        //private PortalModuleBase currentPortalModuleBase
+        //{
+        //    get
+        //    {
+        //        PortalModuleBase pmb = new PortalModuleBase()
+        //        {
+        //            ModuleId = _moduleContext.ModuleId,
+        //            PortalId = _moduleContext.PortalId,
+        //        TabModuleId = _moduleContext.TabId
+        //    };
+        //        return pmb;
+        //    }
+        //}
 
         public ModulePropertiesPropertyAccess(ModuleInstanceContext moduleContext)
         {
@@ -44,19 +63,39 @@ namespace Aricie.DigitalDisplays.Controller
                 case "all":
                     dynamic properties = new ExpandoObject();
                     properties.Resources = GetResources(module);
-                    //properties.Settings = _moduleContext.Settings;
+                    Dictionary<string, string> moduleSettings = new Dictionary<string, string>();
+                    XmlSerializer xmls = new XmlSerializer(typeof(ADSettings));
+                    XmlDocument xmlSerializedObject = new XmlDocument();
+                    foreach (string settingName in _moduleContext.Settings.Keys)
+                    {
+                        //moduleSettings.Add(settingName, JsonConvert.SerializeObject(xmls.Deserialize(_moduleContext.Settings[settingName].ToString())));
+                        using (StringReader objStringReader = new StringReader(_moduleContext.Settings[settingName].ToString()))
+                        {
+                            //moduleSettings.Add(settingName, JsonConvert.SerializeObject(xmls.Deserialize(objStringReader)).Replace("\"", "/'"));
+                            ADSettings currentSettings = (ADSettings)xmls.Deserialize(objStringReader);
+                            foreach (Counter counter in currentSettings.Displays)
+                            {
+                                counter.table = "";
+                                counter.condition = "";
+                            }
+                            moduleSettings.Add(settingName, DotNetNuke.UI.Utilities.ClientAPI.GetSafeJSString(JsonConvert.SerializeObject(currentSettings)));
+                        }
+                    }
+                    properties.Settings = moduleSettings;
                     properties.IsEditable = _moduleContext.IsEditable;
                     properties.EditMode = _moduleContext.EditMode;
                     properties.IsAdmin = accessingUser.IsInRole(PortalSettings.Current.AdministratorRoleName);
                     properties.ModuleId = _moduleContext.ModuleId;
                     properties.PortalId = _moduleContext.PortalId;
                     properties.UserId = accessingUser.UserID;
-                    properties.HomeDirectory = PortalSettings.Current.HomeDirectory.Substring(1);
-                    properties.ModuleDirectory = moduleDirectory;
+                    //properties.HomeDirectory = PortalSettings.Current.HomeDirectory.Substring(1);
+                    //properties.ModuleDirectory = moduleDirectory;
                     properties.RawUrl = HttpContext.Current.Request.RawUrl;
-                    properties.PortalLanguages = GetPortalLanguages();
+                    properties.CurrentTabUrl = _moduleContext.EditUrl("Settings");
+                    //properties.PortalLanguages = GetPortalLanguages();
                     properties.CurrentLanguage = System.Threading.Thread.CurrentThread.CurrentCulture.Name;
-                    properties.Users = UserController.GetUsers(_moduleContext.PortalId).Cast<UserInfo>().Select(u => new { text = u.Username, id = u.UserID }).ToList();
+                    //navigationManager = DependencyProvider.GetRequiredService<INavigationManager>();
+                    //navigationManager.NavigateURL()
                     return JsonConvert.SerializeObject(properties);
             }
             return "";

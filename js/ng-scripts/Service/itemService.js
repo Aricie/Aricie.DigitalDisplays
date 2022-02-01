@@ -12,14 +12,14 @@
         var urlBase = serviceRoot + "item/";
         //urlBase = '/DesktopModules/Aricie.DigitalDisplays/API/item/';
         var service = {};
-        service.getNumber = getNumber;
+        service.getNumbers = getNumbers;
         service.updateItem = updateItem;
         service.newItem = newItem;
         service.deleteItem = deleteItem;
         service.reorderItems = reorderItems;
         service.isAdminUser = isAdminUser;
 
-        function getNumber() {
+        function getNumbers() {
             return $http.get(urlBase + "Number");
         };
         

@@ -12,7 +12,7 @@
         $scope.progressbar = ngProgressFactory.createInstance();
 
         var vm = this;
-        vm.Counter = [];
+        vm.Counters = [];
         vm.AddEditTitle = "";
         vm.EditIndex = -1;
 
@@ -21,20 +21,13 @@
         vm.UserList = moduleProps.Users;
         vm.localize = moduleProps.Resources;
         vm.settings = moduleProps.Settings;
+        if (vm.settings["Aricie.Displays"]) {
+            vm.settings["Aricie.Displays"] = JSON.parse(vm.settings["Aricie.Displays"]);
+        }
         vm.EditMode = moduleProps.IsEditable && moduleProps.EditMode;
         vm.ModuleId = parseInt(moduleProps.ModuleId);
-        //vm.Item = {};
-
         vm.IsAdmin = moduleProps.IsAdmin;
-
-        vm.getNumber = getNumber;
-        vm.createUpdateItem = createUpdateItem;
-        vm.deleteItem = deleteItem;
-        vm.showAdd = showAdd;
-        vm.showEdit = showEdit;
-        vm.reset = resetItem;
-        vm.userSelected = userSelected;
-        vm.isAdminUser = isAdminUser;
+        vm.CurrentTabUrl = moduleProps.CurrentTabUrl;
         vm.sortableOptions = { stop: sortStop, disabled: !vm.EditMode };
         var jsFileLocation = $('script[src*="Aricie.DigitalDisplays/js/ng-scripts/app"]').attr('src');  // the js file path
 		jsFileLocation = jsFileLocation.replace('app.js', '');   // the js folder path
@@ -42,19 +35,24 @@
 			jsFileLocation = jsFileLocation.substr(0, jsFileLocation.indexOf('?'));
 		}
 
-        resetItem();
-        getNumber();
+        //resetItem();
  
-        function getNumber() {
+        function getDisplays() {
             //ngProgress.setColor('red');
             //ngProgress.start();
             $scope.progressbar.setColor('red');
             $scope.progressbar.start();
-            itemService.getNumber()
+            //for (i = 0; i < vm.settings["Aricie.Displays"].Displays.length; i++) {
+            itemService.getNumbers()
                 .then(function(response) {
-                    vm.Counter = response.data;
-                    $(".counter").text(vm.Counter.value);
-                    $(".counter").addClass("eds_counter");
+                    vm.Counters = response.data;
+                    //for (i = 0; i < vm.settings["Aricie.Displays"].Displays.length; i++) {
+                    var i = 0;
+                    $(".counter").each(function () {
+                        $(this).text(vm.Counters[i].value);
+                        $(this).addClass("eds_counter");
+                        i = i + 1;
+                    });
                     $scope.progressbar.complete();
 
                     animateCounter();
@@ -63,6 +61,7 @@
                     $log.error('failure loading items', errData);
                     $scope.progressbar.complete();
                 });
+            //}
         };
 
         function animateCounter() {
@@ -159,15 +158,15 @@
             });
         };
 
-        function resetItem() {
-            vm.Item = {
-                ItemId: 0,
-                ModuleId: vm.ModuleId,
-                Title: '',
-                Description: '',
-                AssignedUserId: ''
-            };
-        };
+        //function resetItem() {
+        //    vm.Item = {
+        //        ItemId: 0,
+        //        ModuleId: vm.ModuleId,
+        //        Title: '',
+        //        Description: '',
+        //        AssignedUserId: ''
+        //    };
+        //};
 
         function userSelected() {
             for (var i = 0; i < vm.UserList.length; i++) {
@@ -202,5 +201,7 @@
                     return false;
                 });
         };
+
+        getDisplays();
     };
 })();

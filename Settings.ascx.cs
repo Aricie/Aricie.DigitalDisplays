@@ -1,4 +1,5 @@
 ﻿using Aricie.DigitalDisplays.Components.Entities;
+using Aricie.DigitalDisplays.Components.Settings;
 using Aricie.DigitalDisplays.Controller;
 using Aricie.DNN.UI.Controls;
 using System;
@@ -7,21 +8,25 @@ namespace Aricie.DigitalDisplays
 {
     public partial class Settings : AriciePortalModuleBase
     {
+        public ADSettings AdSettings
+        {
+            get
+            {
+                ADSettings settings = BusinessController.Instance.GetSettings(ModuleId);
+                if (settings == null)
+                {
+                    settings = new ADSettings();
+                }
+                return settings;
+            }
+        }
+
         protected void Page_Init(object sender, EventArgs e)
         {
-            //if (!Page.IsPostBack)
-            //{
-                this.pEditor.LocalResourceFile = this.SharedResourceFile;
+            this.pEditor.LocalResourceFile = this.SharedResourceFile;
 
-                Counter nbOfItems = BusinessController.Instance.GetCounter(ModuleId);
-                if (nbOfItems == null)
-                {
-                    nbOfItems = new Counter();
-                }
-
-                this.pEditor.DataSource = nbOfItems;
-                this.pEditor.DataBind();
-            //}
+            this.pEditor.SetSessionDataSource(new Lazy<ADSettings>(() => AdSettings));
+            this.pEditor.DataBind();
         }
     }
 }

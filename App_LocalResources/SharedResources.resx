@@ -117,7 +117,1291 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Settings_showPlus.Text" xml:space="preserve">
+  <data name="AddDisplays.Command" xml:space="preserve">
+    <value>Add Display</value>
+  </data>
+  <data name="Adjust.Text" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="Adn.Text" xml:space="preserve">
+    <value>Adn</value>
+  </data>
+  <data name="ADSettings_Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AlignCenter.Text" xml:space="preserve">
+    <value>AlignCenter</value>
+  </data>
+  <data name="AlignJustify.Text" xml:space="preserve">
+    <value>AlignJustify</value>
+  </data>
+  <data name="AlignLeft.Text" xml:space="preserve">
+    <value>AlignLeft</value>
+  </data>
+  <data name="AlignRight.Text" xml:space="preserve">
+    <value>AlignRight</value>
+  </data>
+  <data name="Ambulance.Text" xml:space="preserve">
+    <value>Ambulance</value>
+  </data>
+  <data name="Anchor.Text" xml:space="preserve">
+    <value>Anchor</value>
+  </data>
+  <data name="Android.Text" xml:space="preserve">
+    <value>Android</value>
+  </data>
+  <data name="Angellist.Text" xml:space="preserve">
+    <value>Angellist</value>
+  </data>
+  <data name="AngleDoubleDown.Text" xml:space="preserve">
+    <value>AngleDoubleDown</value>
+  </data>
+  <data name="AngleDoubleLeft.Text" xml:space="preserve">
+    <value>AngleDoubleLeft</value>
+  </data>
+  <data name="AngleDoubleRight.Text" xml:space="preserve">
+    <value>AngleDoubleRight</value>
+  </data>
+  <data name="AngleDoubleUp.Text" xml:space="preserve">
+    <value>AngleDoubleUp</value>
+  </data>
+  <data name="AngleDown.Text" xml:space="preserve">
+    <value>AngleDown</value>
+  </data>
+  <data name="AngleLeft.Text" xml:space="preserve">
+    <value>AngleLeft</value>
+  </data>
+  <data name="AngleRight.Text" xml:space="preserve">
+    <value>AngleRight</value>
+  </data>
+  <data name="AngleUp.Text" xml:space="preserve">
+    <value>AngleUp</value>
+  </data>
+  <data name="Apple.Text" xml:space="preserve">
+    <value>Apple</value>
+  </data>
+  <data name="CancelSettings.Warning" xml:space="preserve">
+    <value>Are you sure you want to exit without saving?</value>
+  </data>
+  <data name="ClearItems.Command" xml:space="preserve">
+    <value>Clear Displays</value>
+  </data>
+  <data name="Counter_approximativeValue.Text" xml:space="preserve">
+    <value>Round value</value>
+  </data>
+  <data name="Counter_condition.Text" xml:space="preserve">
+    <value>SQL criterias</value>
+  </data>
+  <data name="Counter_icon.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Counter_label.Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="Counter_showPlus.Help" xml:space="preserve">
+    <value>Display + near the counter</value>
+  </data>
+  <data name="Counter_showPlus.Text" xml:space="preserve">
     <value>Show Plus</value>
+  </data>
+  <data name="Counter_table.Text" xml:space="preserve">
+    <value>Table name</value>
+  </data>
+  <data name="ItemAdded.Message" xml:space="preserve">
+    <value>Display addeed!</value>
+  </data>
+  <data name="None.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Stop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="ChevronCircleUp.Text" xml:space="preserve">
+    <value>ChevronCircleUp</value>
+  </data>
+  <data name="ChevronDown.Text" xml:space="preserve">
+    <value>ChevronDown</value>
+  </data>
+  <data name="ChevronLeft.Text" xml:space="preserve">
+    <value>ChevronLeft</value>
+  </data>
+  <data name="ChevronRight.Text" xml:space="preserve">
+    <value>ChevronRight</value>
+  </data>
+  <data name="ChevronUp.Text" xml:space="preserve">
+    <value>ChevronUp</value>
+  </data>
+  <data name="Circle.Text" xml:space="preserve">
+    <value>Circle</value>
+  </data>
+  <data name="CircleO.Text" xml:space="preserve">
+    <value>CircleO</value>
+  </data>
+  <data name="Clipboard.Text" xml:space="preserve">
+    <value>Clipboard</value>
+  </data>
+  <data name="ClockO.Text" xml:space="preserve">
+    <value>ClockO</value>
+  </data>
+  <data name="Cloud.Text" xml:space="preserve">
+    <value>Cloud</value>
+  </data>
+  <data name="CloudDownload.Text" xml:space="preserve">
+    <value>CloudDownload</value>
+  </data>
+  <data name="CloudUpload.Text" xml:space="preserve">
+    <value>CloudUpload</value>
+  </data>
+  <data name="Code.Text" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="CodeFork.Text" xml:space="preserve">
+    <value>CodeFork</value>
+  </data>
+  <data name="Coffee.Text" xml:space="preserve">
+    <value>Coffee</value>
+  </data>
+  <data name="Cog.Text" xml:space="preserve">
+    <value>Cog</value>
+  </data>
+  <data name="Cogs.Text" xml:space="preserve">
+    <value>Cogs</value>
+  </data>
+  <data name="Columns.Text" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="Comment.Text" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CommentO.Text" xml:space="preserve">
+    <value>CommentO</value>
+  </data>
+  <data name="Comments.Text" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="CommentsO.Text" xml:space="preserve">
+    <value>CommentsO</value>
+  </data>
+  <data name="Compass.Text" xml:space="preserve">
+    <value>Compass</value>
+  </data>
+  <data name="Compress.Text" xml:space="preserve">
+    <value>Compress</value>
+  </data>
+  <data name="Copyright.Text" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="CreditCard.Text" xml:space="preserve">
+    <value>CreditCard</value>
+  </data>
+  <data name="String126" xml:space="preserve">
+    <value>Crop</value>
+  </data>
+  <data name="Crosshairs.Text" xml:space="preserve">
+    <value>Crosshairs</value>
+  </data>
+  <data name="String128" xml:space="preserve">
+    <value>Css3</value>
+  </data>
+  <data name="String129" xml:space="preserve">
+    <value>Cutlery</value>
+  </data>
+  <data name="Desktop.Text" xml:space="preserve">
+    <value>Desktop</value>
+  </data>
+  <data name="String131" xml:space="preserve">
+    <value>DotCircleO</value>
+  </data>
+  <data name="Download.Text" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="String133" xml:space="preserve">
+    <value>Dribbble</value>
+  </data>
+  <data name="Dropbox.Text" xml:space="preserve">
+    <value>Dropbox</value>
+  </data>
+  <data name="String135" xml:space="preserve">
+    <value>Eject</value>
+  </data>
+  <data name="String136" xml:space="preserve">
+    <value>EllipsisH</value>
+  </data>
+  <data name="String137" xml:space="preserve">
+    <value>EllipsisV</value>
+  </data>
+  <data name="Envelope.Text" xml:space="preserve">
+    <value>Envelope</value>
+  </data>
+  <data name="String139" xml:space="preserve">
+    <value>EnvelopeO</value>
+  </data>
+  <data name="Eraser.Text" xml:space="preserve">
+    <value>Eraser</value>
+  </data>
+  <data name="String141" xml:space="preserve">
+    <value>Eur</value>
+  </data>
+  <data name="Exchange.Text" xml:space="preserve">
+    <value>Exchange</value>
+  </data>
+  <data name="Exclamation.Text" xml:space="preserve">
+    <value>Exclamation</value>
+  </data>
+  <data name="ExclamationCircle.Text" xml:space="preserve">
+    <value>ExclamationCircle</value>
+  </data>
+  <data name="ExclamationTriangle.Text" xml:space="preserve">
+    <value>ExclamationTriangle</value>
+  </data>
+  <data name="Expand.Text" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="ExternalLink.Text" xml:space="preserve">
+    <value>ExternalLink</value>
+  </data>
+  <data name="ExternalLinkSquare.Text" xml:space="preserve">
+    <value>ExternalLinkSquare</value>
+  </data>
+  <data name="Eye.Text" xml:space="preserve">
+    <value>Eye</value>
+  </data>
+  <data name="String150" xml:space="preserve">
+    <value>Eyedropper</value>
+  </data>
+  <data name="String151" xml:space="preserve">
+    <value>EyeSlash</value>
+  </data>
+  <data name="Facebook.Text" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="FacebookSquare.Text" xml:space="preserve">
+    <value>FacebookSquare</value>
+  </data>
+  <data name="FastBackward.Text" xml:space="preserve">
+    <value>FastBackward</value>
+  </data>
+  <data name="FastForward.Text" xml:space="preserve">
+    <value>FastForward</value>
+  </data>
+  <data name="Female.Text" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="FighterJet.Text" xml:space="preserve">
+    <value>FighterJet</value>
+  </data>
+  <data name="File.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="String159" xml:space="preserve">
+    <value>FileO</value>
+  </data>
+  <data name="String160" xml:space="preserve">
+    <value>FilesO</value>
+  </data>
+  <data name="String161" xml:space="preserve">
+    <value>FileText</value>
+  </data>
+  <data name="String162" xml:space="preserve">
+    <value>FileTextO</value>
+  </data>
+  <data name="String163" xml:space="preserve">
+    <value>Film</value>
+  </data>
+  <data name="String164" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="String165" xml:space="preserve">
+    <value>Fire</value>
+  </data>
+  <data name="String166" xml:space="preserve">
+    <value>FireExtinguisher</value>
+  </data>
+  <data name="String167" xml:space="preserve">
+    <value>Flag</value>
+  </data>
+  <data name="String168" xml:space="preserve">
+    <value>FlagCheckered</value>
+  </data>
+  <data name="String169" xml:space="preserve">
+    <value>FlagO</value>
+  </data>
+  <data name="String170" xml:space="preserve">
+    <value>Flask</value>
+  </data>
+  <data name="String171" xml:space="preserve">
+    <value>Flickr</value>
+  </data>
+  <data name="String172" xml:space="preserve">
+    <value>FloppyO</value>
+  </data>
+  <data name="String173" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="String174" xml:space="preserve">
+    <value>FolderO</value>
+  </data>
+  <data name="String175" xml:space="preserve">
+    <value>FolderOpen</value>
+  </data>
+  <data name="String176" xml:space="preserve">
+    <value>FolderOpenO</value>
+  </data>
+  <data name="String177" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="String178" xml:space="preserve">
+    <value>Forward</value>
+  </data>
+  <data name="String179" xml:space="preserve">
+    <value>Foursquare</value>
+  </data>
+  <data name="String180" xml:space="preserve">
+    <value>FrownO</value>
+  </data>
+  <data name="String181" xml:space="preserve">
+    <value>FutbolO</value>
+  </data>
+  <data name="String182" xml:space="preserve">
+    <value>Gamepad</value>
+  </data>
+  <data name="String183" xml:space="preserve">
+    <value>Gavel</value>
+  </data>
+  <data name="String184" xml:space="preserve">
+    <value>Gbp</value>
+  </data>
+  <data name="String185" xml:space="preserve">
+    <value>Gift</value>
+  </data>
+  <data name="String186" xml:space="preserve">
+    <value>Github</value>
+  </data>
+  <data name="String187" xml:space="preserve">
+    <value>GithubAlt</value>
+  </data>
+  <data name="String188" xml:space="preserve">
+    <value>GithubSquare</value>
+  </data>
+  <data name="String189" xml:space="preserve">
+    <value>Gittip</value>
+  </data>
+  <data name="String190" xml:space="preserve">
+    <value>Glass</value>
+  </data>
+  <data name="String191" xml:space="preserve">
+    <value>Globe</value>
+  </data>
+  <data name="String192" xml:space="preserve">
+    <value>Google</value>
+  </data>
+  <data name="String193" xml:space="preserve">
+    <value>GooglePlus</value>
+  </data>
+  <data name="String194" xml:space="preserve">
+    <value>GooglePlusSquare</value>
+  </data>
+  <data name="String195" xml:space="preserve">
+    <value>GoogleWallet</value>
+  </data>
+  <data name="String196" xml:space="preserve">
+    <value>HandODown</value>
+  </data>
+  <data name="String197" xml:space="preserve">
+    <value>HandOLeft</value>
+  </data>
+  <data name="String198" xml:space="preserve">
+    <value>HandORight</value>
+  </data>
+  <data name="String199" xml:space="preserve">
+    <value>HandOUp</value>
+  </data>
+  <data name="String200" xml:space="preserve">
+    <value>HddO</value>
+  </data>
+  <data name="String201" xml:space="preserve">
+    <value>Headphones</value>
+  </data>
+  <data name="String202" xml:space="preserve">
+    <value>Heart</value>
+  </data>
+  <data name="String203" xml:space="preserve">
+    <value>HeartO</value>
+  </data>
+  <data name="String204" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="String205" xml:space="preserve">
+    <value>HospitalO</value>
+  </data>
+  <data name="String206" xml:space="preserve">
+    <value>HSquare</value>
+  </data>
+  <data name="String207" xml:space="preserve">
+    <value>Html5</value>
+  </data>
+  <data name="String208" xml:space="preserve">
+    <value>Ils</value>
+  </data>
+  <data name="String209" xml:space="preserve">
+    <value>Inbox</value>
+  </data>
+  <data name="String210" xml:space="preserve">
+    <value>Indent</value>
+  </data>
+  <data name="String211" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="String212" xml:space="preserve">
+    <value>InfoCircle</value>
+  </data>
+  <data name="String213" xml:space="preserve">
+    <value>Inr</value>
+  </data>
+  <data name="String214" xml:space="preserve">
+    <value>Instagram</value>
+  </data>
+  <data name="String215" xml:space="preserve">
+    <value>Ioxhost</value>
+  </data>
+  <data name="String216" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="String217" xml:space="preserve">
+    <value>Jpy</value>
+  </data>
+  <data name="String218" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="String219" xml:space="preserve">
+    <value>KeyboardO</value>
+  </data>
+  <data name="String220" xml:space="preserve">
+    <value>Krw</value>
+  </data>
+  <data name="String221" xml:space="preserve">
+    <value>Laptop</value>
+  </data>
+  <data name="String222" xml:space="preserve">
+    <value>Lastfm</value>
+  </data>
+  <data name="String223" xml:space="preserve">
+    <value>LastfmSquare</value>
+  </data>
+  <data name="String224" xml:space="preserve">
+    <value>Leaf</value>
+  </data>
+  <data name="String225" xml:space="preserve">
+    <value>LemonO</value>
+  </data>
+  <data name="String226" xml:space="preserve">
+    <value>LevelDown</value>
+  </data>
+  <data name="String227" xml:space="preserve">
+    <value>LevelUp</value>
+  </data>
+  <data name="String228" xml:space="preserve">
+    <value>LightbulbO</value>
+  </data>
+  <data name="String229" xml:space="preserve">
+    <value>LineChart</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="String230" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="String231" xml:space="preserve">
+    <value>Linkedin</value>
+  </data>
+  <data name="String232" xml:space="preserve">
+    <value>LinkedinSquare</value>
+  </data>
+  <data name="String233" xml:space="preserve">
+    <value>Linux</value>
+  </data>
+  <data name="String234" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="String235" xml:space="preserve">
+    <value>ListAlt</value>
+  </data>
+  <data name="String236" xml:space="preserve">
+    <value>ListOl</value>
+  </data>
+  <data name="String237" xml:space="preserve">
+    <value>ListUl</value>
+  </data>
+  <data name="String238" xml:space="preserve">
+    <value>LocationArrow</value>
+  </data>
+  <data name="String239" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>AreaChart</value>
+  </data>
+  <data name="String240" xml:space="preserve">
+    <value>LongArrowDown</value>
+  </data>
+  <data name="String241" xml:space="preserve">
+    <value>LongArrowLeft</value>
+  </data>
+  <data name="String242" xml:space="preserve">
+    <value>LongArrowRight</value>
+  </data>
+  <data name="String243" xml:space="preserve">
+    <value>LongArrowUp</value>
+  </data>
+  <data name="String244" xml:space="preserve">
+    <value>Magic</value>
+  </data>
+  <data name="String245" xml:space="preserve">
+    <value>Magnet</value>
+  </data>
+  <data name="String246" xml:space="preserve">
+    <value>MailReplyAll</value>
+  </data>
+  <data name="String247" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="String248" xml:space="preserve">
+    <value>MapMarker</value>
+  </data>
+  <data name="String249" xml:space="preserve">
+    <value>Maxcdn</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>ArrowCircleDown</value>
+  </data>
+  <data name="String250" xml:space="preserve">
+    <value>Meanpath</value>
+  </data>
+  <data name="String251" xml:space="preserve">
+    <value>Medkit</value>
+  </data>
+  <data name="String252" xml:space="preserve">
+    <value>MehO</value>
+  </data>
+  <data name="String253" xml:space="preserve">
+    <value>Microphone</value>
+  </data>
+  <data name="String254" xml:space="preserve">
+    <value>MicrophoneSlash</value>
+  </data>
+  <data name="String255" xml:space="preserve">
+    <value>Minus</value>
+  </data>
+  <data name="String256" xml:space="preserve">
+    <value>MinusCircle</value>
+  </data>
+  <data name="String257" xml:space="preserve">
+    <value>MinusSquare</value>
+  </data>
+  <data name="String258" xml:space="preserve">
+    <value>MinusSquareO</value>
+  </data>
+  <data name="String259" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="String26" xml:space="preserve">
+    <value>ArrowCircleLeft</value>
+  </data>
+  <data name="String260" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="String261" xml:space="preserve">
+    <value>MoonO</value>
+  </data>
+  <data name="String262" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="String263" xml:space="preserve">
+    <value>NewspaperO</value>
+  </data>
+  <data name="String264" xml:space="preserve">
+    <value>Outdent</value>
+  </data>
+  <data name="String265" xml:space="preserve">
+    <value>Pagelines</value>
+  </data>
+  <data name="String266" xml:space="preserve">
+    <value>PaintBrush</value>
+  </data>
+  <data name="String267" xml:space="preserve">
+    <value>Paperclip</value>
+  </data>
+  <data name="String268" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="String269" xml:space="preserve">
+    <value>Paypal</value>
+  </data>
+  <data name="String27" xml:space="preserve">
+    <value>ArrowCircleODown</value>
+  </data>
+  <data name="String270" xml:space="preserve">
+    <value>Pencil</value>
+  </data>
+  <data name="String271" xml:space="preserve">
+    <value>PencilSquare</value>
+  </data>
+  <data name="String272" xml:space="preserve">
+    <value>PencilSquareO</value>
+  </data>
+  <data name="String273" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="String274" xml:space="preserve">
+    <value>PhoneSquare</value>
+  </data>
+  <data name="String275" xml:space="preserve">
+    <value>PictureO</value>
+  </data>
+  <data name="String276" xml:space="preserve">
+    <value>PieChart</value>
+  </data>
+  <data name="String277" xml:space="preserve">
+    <value>Pinterest</value>
+  </data>
+  <data name="String278" xml:space="preserve">
+    <value>PinterestSquare</value>
+  </data>
+  <data name="String279" xml:space="preserve">
+    <value>Plane</value>
+  </data>
+  <data name="String28" xml:space="preserve">
+    <value>ArrowCircleOLeft</value>
+  </data>
+  <data name="String280" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="String281" xml:space="preserve">
+    <value>PlayCircle</value>
+  </data>
+  <data name="String282" xml:space="preserve">
+    <value>PlayCircleO</value>
+  </data>
+  <data name="String283" xml:space="preserve">
+    <value>Plug</value>
+  </data>
+  <data name="String284" xml:space="preserve">
+    <value>Plus</value>
+  </data>
+  <data name="String285" xml:space="preserve">
+    <value>PlusCircle</value>
+  </data>
+  <data name="String286" xml:space="preserve">
+    <value>PlusSquare</value>
+  </data>
+  <data name="String287" xml:space="preserve">
+    <value>PowerOff</value>
+  </data>
+  <data name="String288" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="String289" xml:space="preserve">
+    <value>PuzzlePiece</value>
+  </data>
+  <data name="String29" xml:space="preserve">
+    <value>ArrowCircleORight</value>
+  </data>
+  <data name="String290" xml:space="preserve">
+    <value>Qrcode</value>
+  </data>
+  <data name="String291" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="String292" xml:space="preserve">
+    <value>QuestionCircle</value>
+  </data>
+  <data name="String293" xml:space="preserve">
+    <value>QuoteLeft</value>
+  </data>
+  <data name="String294" xml:space="preserve">
+    <value>QuoteRight</value>
+  </data>
+  <data name="String295" xml:space="preserve">
+    <value>Random</value>
+  </data>
+  <data name="String296" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="String297" xml:space="preserve">
+    <value>Renren</value>
+  </data>
+  <data name="String298" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="String299" xml:space="preserve">
+    <value>Reply</value>
+  </data>
+  <data name="String30" xml:space="preserve">
+    <value>ArrowCircleOUp</value>
+  </data>
+  <data name="String300" xml:space="preserve">
+    <value>ReplyAll</value>
+  </data>
+  <data name="String301" xml:space="preserve">
+    <value>Retweet</value>
+  </data>
+  <data name="String302" xml:space="preserve">
+    <value>Road</value>
+  </data>
+  <data name="String303" xml:space="preserve">
+    <value>Rocket</value>
+  </data>
+  <data name="String304" xml:space="preserve">
+    <value>Rss</value>
+  </data>
+  <data name="String305" xml:space="preserve">
+    <value>RssSquare</value>
+  </data>
+  <data name="String306" xml:space="preserve">
+    <value>Rub</value>
+  </data>
+  <data name="String307" xml:space="preserve">
+    <value>Scissors</value>
+  </data>
+  <data name="String308" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="String309" xml:space="preserve">
+    <value>SearchMinus</value>
+  </data>
+  <data name="String31" xml:space="preserve">
+    <value>ArrowCircleRight</value>
+  </data>
+  <data name="String310" xml:space="preserve">
+    <value>SearchPlus</value>
+  </data>
+  <data name="String311" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="String312" xml:space="preserve">
+    <value>ShareSquare</value>
+  </data>
+  <data name="String313" xml:space="preserve">
+    <value>ShareSquareO</value>
+  </data>
+  <data name="String314" xml:space="preserve">
+    <value>ShekelAlias</value>
+  </data>
+  <data name="String315" xml:space="preserve">
+    <value>SheqelAlias</value>
+  </data>
+  <data name="String316" xml:space="preserve">
+    <value>Shield</value>
+  </data>
+  <data name="String317" xml:space="preserve">
+    <value>ShoppingCart</value>
+  </data>
+  <data name="String318" xml:space="preserve">
+    <value>Signal</value>
+  </data>
+  <data name="String319" xml:space="preserve">
+    <value>SignIn</value>
+  </data>
+  <data name="String32" xml:space="preserve">
+    <value>ArrowCircleUp</value>
+  </data>
+  <data name="String320" xml:space="preserve">
+    <value>SignOut</value>
+  </data>
+  <data name="String321" xml:space="preserve">
+    <value>Sitemap</value>
+  </data>
+  <data name="String322" xml:space="preserve">
+    <value>Skype</value>
+  </data>
+  <data name="String323" xml:space="preserve">
+    <value>Slideshare</value>
+  </data>
+  <data name="String324" xml:space="preserve">
+    <value>SmileO</value>
+  </data>
+  <data name="String325" xml:space="preserve">
+    <value>SoccerBallOAlias</value>
+  </data>
+  <data name="String326" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="String327" xml:space="preserve">
+    <value>SortAlphaAsc</value>
+  </data>
+  <data name="String328" xml:space="preserve">
+    <value>SortAlphaDesc</value>
+  </data>
+  <data name="String329" xml:space="preserve">
+    <value>SortAmountAsc</value>
+  </data>
+  <data name="String33" xml:space="preserve">
+    <value>ArrowDown</value>
+  </data>
+  <data name="String330" xml:space="preserve">
+    <value>SortAmountDesc</value>
+  </data>
+  <data name="String331" xml:space="preserve">
+    <value>SortAsc</value>
+  </data>
+  <data name="String332" xml:space="preserve">
+    <value>SortDesc</value>
+  </data>
+  <data name="String333" xml:space="preserve">
+    <value>SortNumericAsc</value>
+  </data>
+  <data name="String334" xml:space="preserve">
+    <value>SortNumericDesc</value>
+  </data>
+  <data name="String335" xml:space="preserve">
+    <value>Spinner</value>
+  </data>
+  <data name="String336" xml:space="preserve">
+    <value>Square</value>
+  </data>
+  <data name="String337" xml:space="preserve">
+    <value>SquareO</value>
+  </data>
+  <data name="String338" xml:space="preserve">
+    <value>StackExchange</value>
+  </data>
+  <data name="String339" xml:space="preserve">
+    <value>StackOverflow</value>
+  </data>
+  <data name="String34" xml:space="preserve">
+    <value>ArrowLeft</value>
+  </data>
+  <data name="String340" xml:space="preserve">
+    <value>Star</value>
+  </data>
+  <data name="String341" xml:space="preserve">
+    <value>StarHalf</value>
+  </data>
+  <data name="String342" xml:space="preserve">
+    <value>StarHalfO</value>
+  </data>
+  <data name="String343" xml:space="preserve">
+    <value>StarO</value>
+  </data>
+  <data name="String344" xml:space="preserve">
+    <value>StepBackward</value>
+  </data>
+  <data name="String345" xml:space="preserve">
+    <value>StepForward</value>
+  </data>
+  <data name="String346" xml:space="preserve">
+    <value>Stethoscope</value>
+  </data>
+  <data name="String347" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="String348" xml:space="preserve">
+    <value>Subscript</value>
+  </data>
+  <data name="String349" xml:space="preserve">
+    <value>Suitcase</value>
+  </data>
+  <data name="String35" xml:space="preserve">
+    <value>ArrowRight</value>
+  </data>
+  <data name="String350" xml:space="preserve">
+    <value>SunO</value>
+  </data>
+  <data name="String351" xml:space="preserve">
+    <value>Superscript</value>
+  </data>
+  <data name="String352" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="String353" xml:space="preserve">
+    <value>Tablet</value>
+  </data>
+  <data name="String354" xml:space="preserve">
+    <value>Tachometer</value>
+  </data>
+  <data name="String355" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="String356" xml:space="preserve">
+    <value>Tags</value>
+  </data>
+  <data name="String357" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="String358" xml:space="preserve">
+    <value>Terminal</value>
+  </data>
+  <data name="String359" xml:space="preserve">
+    <value>TextHeight</value>
+  </data>
+  <data name="String36" xml:space="preserve">
+    <value>Arrows</value>
+  </data>
+  <data name="String360" xml:space="preserve">
+    <value>TextWidth</value>
+  </data>
+  <data name="String361" xml:space="preserve">
+    <value>Th</value>
+  </data>
+  <data name="String362" xml:space="preserve">
+    <value>ThLarge</value>
+  </data>
+  <data name="String363" xml:space="preserve">
+    <value>ThList</value>
+  </data>
+  <data name="String364" xml:space="preserve">
+    <value>ThumbsDown</value>
+  </data>
+  <data name="String365" xml:space="preserve">
+    <value>ThumbsODown</value>
+  </data>
+  <data name="String366" xml:space="preserve">
+    <value>ThumbsOUp</value>
+  </data>
+  <data name="String367" xml:space="preserve">
+    <value>ThumbsUp</value>
+  </data>
+  <data name="String368" xml:space="preserve">
+    <value>ThumbTack</value>
+  </data>
+  <data name="Ticket.Text" xml:space="preserve">
+    <value>Ticket</value>
+  </data>
+  <data name="ArrowsAlt.Text" xml:space="preserve">
+    <value>ArrowsAlt</value>
+  </data>
+  <data name="Times.Text" xml:space="preserve">
+    <value>Times</value>
+  </data>
+  <data name="TimesCircle.Text" xml:space="preserve">
+    <value>TimesCircle</value>
+  </data>
+  <data name="TimesCircleO.Text" xml:space="preserve">
+    <value>TimesCircleO</value>
+  </data>
+  <data name="String373" xml:space="preserve">
+    <value>Tint</value>
+  </data>
+  <data name="ToggleOff.Text" xml:space="preserve">
+    <value>ToggleOff</value>
+  </data>
+  <data name="ToggleOn.Text" xml:space="preserve">
+    <value>ToggleOn</value>
+  </data>
+  <data name="Trash.Text" xml:space="preserve">
+    <value>Trash</value>
+  </data>
+  <data name="TrashO.Text" xml:space="preserve">
+    <value>TrashO</value>
+  </data>
+  <data name="String378" xml:space="preserve">
+    <value>Trello</value>
+  </data>
+  <data name="Trophy.Text" xml:space="preserve">
+    <value>Trophy</value>
+  </data>
+  <data name="ArrowsH.Text" xml:space="preserve">
+    <value>ArrowsH</value>
+  </data>
+  <data name="String380" xml:space="preserve">
+    <value>Truck</value>
+  </data>
+  <data name="String381" xml:space="preserve">
+    <value>Tty</value>
+  </data>
+  <data name="String382" xml:space="preserve">
+    <value>Tumblr</value>
+  </data>
+  <data name="String383" xml:space="preserve">
+    <value>TumblrSquare</value>
+  </data>
+  <data name="String384" xml:space="preserve">
+    <value>Twitch</value>
+  </data>
+  <data name="String385" xml:space="preserve">
+    <value>Twitter</value>
+  </data>
+  <data name="String386" xml:space="preserve">
+    <value>TwitterSquare</value>
+  </data>
+  <data name="Umbrella.Text" xml:space="preserve">
+    <value>Umbrella</value>
+  </data>
+  <data name="Underline.Text" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="Undo.Text" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="ArrowsV.Text" xml:space="preserve">
+    <value>ArrowsV</value>
+  </data>
+  <data name="Unlock.Text" xml:space="preserve">
+    <value>Unlock</value>
+  </data>
+  <data name="UnlockAlt.Text" xml:space="preserve">
+    <value>UnlockAlt</value>
+  </data>
+  <data name="Upload.Text" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Usd.Text" xml:space="preserve">
+    <value>Usd</value>
+  </data>
+  <data name="User.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserMd.Text" xml:space="preserve">
+    <value>UserMd</value>
+  </data>
+  <data name="Users.Text" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="String397" xml:space="preserve">
+    <value>VideoCamera</value>
+  </data>
+  <data name="String398" xml:space="preserve">
+    <value>VimeoSquare</value>
+  </data>
+  <data name="String399" xml:space="preserve">
+    <value>Vk</value>
+  </data>
+  <data name="ArrowUp.Text" xml:space="preserve">
+    <value>ArrowUp</value>
+  </data>
+  <data name="String400" xml:space="preserve">
+    <value>VolumeDown</value>
+  </data>
+  <data name="String401" xml:space="preserve">
+    <value>VolumeOff</value>
+  </data>
+  <data name="String402" xml:space="preserve">
+    <value>VolumeUp</value>
+  </data>
+  <data name="String403" xml:space="preserve">
+    <value>Weibo</value>
+  </data>
+  <data name="String404" xml:space="preserve">
+    <value>Wheelchair</value>
+  </data>
+  <data name="Wifi.Text" xml:space="preserve">
+    <value>Wifi</value>
+  </data>
+  <data name="Windows.Text" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="Wrench.Text" xml:space="preserve">
+    <value>Wrench</value>
+  </data>
+  <data name="Xing.Text" xml:space="preserve">
+    <value>Xing</value>
+  </data>
+  <data name="String409" xml:space="preserve">
+    <value>XingSquare</value>
+  </data>
+  <data name="Asterisk.Text" xml:space="preserve">
+    <value>Asterisk</value>
+  </data>
+  <data name="String410" xml:space="preserve">
+    <value>Yelp</value>
+  </data>
+  <data name="String411" xml:space="preserve">
+    <value>Youtube</value>
+  </data>
+  <data name="String412" xml:space="preserve">
+    <value>YoutubePlay</value>
+  </data>
+  <data name="String413" xml:space="preserve">
+    <value>YoutubeSquare</value>
+  </data>
+  <data name="At.Text" xml:space="preserve">
+    <value>At</value>
+  </data>
+  <data name="Backward.Text" xml:space="preserve">
+    <value>Backward</value>
+  </data>
+  <data name="Ban.Text" xml:space="preserve">
+    <value>Ban</value>
+  </data>
+  <data name="String45" xml:space="preserve">
+    <value>BarChartO</value>
+  </data>
+  <data name="Barcode.Text" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="Bars.Text" xml:space="preserve">
+    <value>Bars</value>
+  </data>
+  <data name="Beer.Text" xml:space="preserve">
+    <value>Beer</value>
+  </data>
+  <data name="Bell.Text" xml:space="preserve">
+    <value>Bell</value>
+  </data>
+  <data name="BellO.Text" xml:space="preserve">
+    <value>BellO</value>
+  </data>
+  <data name="BellSlash.Text" xml:space="preserve">
+    <value>BellSlash</value>
+  </data>
+  <data name="BellSlashO.Text" xml:space="preserve">
+    <value>BellSlashO</value>
+  </data>
+  <data name="Bicycle.Text" xml:space="preserve">
+    <value>Bicycle</value>
+  </data>
+  <data name="Binoculars.Text" xml:space="preserve">
+    <value>Binoculars</value>
+  </data>
+  <data name="String55" xml:space="preserve">
+    <value>BirthdayCake</value>
+  </data>
+  <data name="String56" xml:space="preserve">
+    <value>Bitbucket</value>
+  </data>
+  <data name="String57" xml:space="preserve">
+    <value>BitbucketSquare</value>
+  </data>
+  <data name="Bold.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="String59" xml:space="preserve">
+    <value>Bolt</value>
+  </data>
+  <data name="Book.Text" xml:space="preserve">
+    <value>Book</value>
+  </data>
+  <data name="Bookmark.Text" xml:space="preserve">
+    <value>Bookmark</value>
+  </data>
+  <data name="BookmarkO.Text" xml:space="preserve">
+    <value>BookmarkO</value>
+  </data>
+  <data name="String63" xml:space="preserve">
+    <value>Briefcase</value>
+  </data>
+  <data name="Btc.Text" xml:space="preserve">
+    <value>Btc</value>
+  </data>
+  <data name="Bug.Text" xml:space="preserve">
+    <value>Bug</value>
+  </data>
+  <data name="BuildingO.Text" xml:space="preserve">
+    <value>BuildingO</value>
+  </data>
+  <data name="String67" xml:space="preserve">
+    <value>Bullhorn</value>
+  </data>
+  <data name="String68" xml:space="preserve">
+    <value>Bullseye</value>
+  </data>
+  <data name="Bus.Text" xml:space="preserve">
+    <value>Bus</value>
+  </data>
+  <data name="Calculator.Text" xml:space="preserve">
+    <value>Calculator</value>
+  </data>
+  <data name="Calendar.Text" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="CalendarO.Text" xml:space="preserve">
+    <value>CalendarO</value>
+  </data>
+  <data name="Camera.Text" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="CameraRetro.Text" xml:space="preserve">
+    <value>CameraRetro</value>
+  </data>
+  <data name="String75" xml:space="preserve">
+    <value>CaretDown</value>
+  </data>
+  <data name="String76" xml:space="preserve">
+    <value>CaretLeft</value>
+  </data>
+  <data name="String77" xml:space="preserve">
+    <value>CaretRight</value>
+  </data>
+  <data name="String78" xml:space="preserve">
+    <value>CaretSquareODown</value>
+  </data>
+  <data name="String79" xml:space="preserve">
+    <value>CaretSquareOLeft</value>
+  </data>
+  <data name="String80" xml:space="preserve">
+    <value>CaretSquareORight</value>
+  </data>
+  <data name="String81" xml:space="preserve">
+    <value>CaretSquareOUp</value>
+  </data>
+  <data name="String82" xml:space="preserve">
+    <value>CaretUp</value>
+  </data>
+  <data name="Cc.Text" xml:space="preserve">
+    <value>Cc</value>
+  </data>
+  <data name="String84" xml:space="preserve">
+    <value>CcAmex</value>
+  </data>
+  <data name="String85" xml:space="preserve">
+    <value>CcDiscover</value>
+  </data>
+  <data name="CcMastercard.Text" xml:space="preserve">
+    <value>CcMastercard</value>
+  </data>
+  <data name="CcPaypal.Text" xml:space="preserve">
+    <value>CcPaypal</value>
+  </data>
+  <data name="String88" xml:space="preserve">
+    <value>CcStripe</value>
+  </data>
+  <data name="CcVisa.Text" xml:space="preserve">
+    <value>CcVisa</value>
+  </data>
+  <data name="Certificate.Text" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="ChainBroken.Text" xml:space="preserve">
+    <value>ChainBroken</value>
+  </data>
+  <data name="Check.Text" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="CheckCircle.Text" xml:space="preserve">
+    <value>CheckCircle</value>
+  </data>
+  <data name="CheckCircleO.Text" xml:space="preserve">
+    <value>CheckCircleO</value>
+  </data>
+  <data name="CheckSquare.Text" xml:space="preserve">
+    <value>CheckSquare</value>
+  </data>
+  <data name="CheckSquareO.Text" xml:space="preserve">
+    <value>CheckSquareO</value>
+  </data>
+  <data name="ChevronCircleDown.Text" xml:space="preserve">
+    <value>ChevronCircleDown</value>
+  </data>
+  <data name="ChevronCircleLeft.Text" xml:space="preserve">
+    <value>ChevronCircleLeft</value>
+  </data>
+  <data name="ChevronCircleRight.Text" xml:space="preserve">
+    <value>ChevronCircleRight</value>
+  </data>
+  <data name="Try.Text" xml:space="preserve">
+    <value>Try</value>
+  </data>
+  <data name="ADSettings_DisplayMode.Help" xml:space="preserve">
+    <value>0: Count, 1: Count down</value>
+  </data>
+  <data name="ADSettings_DisplayMode.Text" xml:space="preserve">
+    <value>Display Mode</value>
+  </data>
+  <data name="ADSettings_Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Counter_icon2.Text" xml:space="preserve">
+    <value>Icon Selector</value>
   </data>
 </root>

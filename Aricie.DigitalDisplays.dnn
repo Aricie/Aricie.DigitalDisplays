@@ -9,14 +9,19 @@
     <url>https://aricie.com</url>
     <email>support@aricie.fr</email>
   </owner>
-  <license>La licence de ce paquet n'est pas actuellement inclue avec les fichiers d'installation, merci ce contacter le fournisseur pour des détails complets sur la licence.</license>
-  <releaseNotes />
+  <license />
+  <releaseNotes src="Release.txt"></releaseNotes>
+  <azureCompatible>True</azureCompatible>
+  <dependencies>
+    <dependency type="coreVersion">09.08.00</dependency>
+    <dependency type="managedPackage" version="2.1.0">Aricie.Shared</dependency>
+  </dependencies>
   <components>
     <component type="Module">
       <desktopModule>
         <moduleName>Aricie.DigitalDisplays</moduleName>
         <foldername>Aricie.DigitalDisplays</foldername>
-        <businessControllerClass />
+        <businessControllerClass>Aricie.DigitalDisplays.Controller.BusinessController, Aricie.DNN.Modules.DigitalDisplays</businessControllerClass>
         <supportedFeatures />
         <moduleDefinitions>
           <moduleDefinition>
@@ -49,6 +54,15 @@
           </moduleDefinition>
         </moduleDefinitions>
       </desktopModule>
+      <eventMessage>
+        <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+        <processorCommand>UpgradeModule</processorCommand>
+        <attributes>
+          <businessControllerClass>Aricie.DigitalDisplays.Controller.BusinessController, Aricie.DNN.Modules.DigitalDisplays</businessControllerClass>
+          <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+          <upgradeVersionsList />
+        </attributes>
+      </eventMessage>
     </component>
     <component type="Assembly">
       <assemblies>
@@ -64,6 +78,14 @@
         <file>
           <path>App_LocalResources</path>
           <name>SharedResources.resx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
+          <name>View.html.resx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
+          <name>View.html.fr-FR.resx</name>
         </file>
         <file>
           <path>Content</path>
@@ -92,6 +114,10 @@
         <file>
           <path>js\ng-scripts\Service</path>
           <name>itemService.js</name>
+        </file>
+        <file>
+          <path>js\ng-scripts\Templates</path>
+          <name>index.html</name>
         </file>
         <file>
           <path>Scripts</path>
@@ -139,6 +165,9 @@
         </file>
         <file>
           <name>module.css</name>
+        </file>
+        <file>
+          <name>Release.txt</name>
         </file>
         <file>
           <name>Settings.ascx</name>

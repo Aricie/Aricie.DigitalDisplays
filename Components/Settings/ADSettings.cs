@@ -1,0 +1,167 @@
+﻿using Aricie.Collections;
+using Aricie.DigitalDisplays.Components.Entities;
+using Aricie.DNN.ComponentModel;
+using Aricie.DNN.Settings;
+using Aricie.DNN.UI.Attributes;
+using Aricie.DNN.UI.WebControls;
+using Aricie.Services;
+//using DotNetNuke.Abstractions;
+using DotNetNuke.Common;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Xml.Serialization;
+
+namespace Aricie.DigitalDisplays.Components.Settings
+{
+    public class ADSettings
+    {
+        //protected INavigationManager navigationManager;
+
+        private int displayMode = -1;
+        private ObservableCollection<Counter> displays = new ObservableCollection<Counter>();
+
+        //public ADSettings()
+        //{
+        //    navigationManager = DependencyProvider.GetRequiredService<INavigationManager>();
+        //}
+
+        public enum Display
+        {
+            Counter,
+            CountDown
+        }
+
+        [ConditionalVisible(nameof(DisplaysModeSpecified), true)]
+        public int DisplayMode {
+            get
+            {
+                return displayMode;
+            }
+            set
+            {
+                if (displayMode == -1 && value != -1)
+                {
+                    displayMode = value;
+                    DisplaysModeSpecified = true;
+                }
+                switch (displayMode)
+                {
+                    case 1:
+                        {
+                            ShowCountDownSettings = true;
+                            break;
+                        }
+                    default:
+                        {
+                            ShowCountersList = true;
+                            break;
+                        }
+                }
+            }
+        }
+
+        [XmlIgnore]
+        [JsonIgnore]
+        [Browsable(false)]
+        public bool DisplaysModeSpecified { get; set; } = false;
+
+        [XmlIgnore]
+        [JsonIgnore]
+        [Browsable(false)]
+        public bool ShowCountersList { get; set; } = false;
+
+        [XmlIgnore]
+        [JsonIgnore]
+        [Browsable(false)]
+        public bool ShowCountDownSettings { get; set; } = false;
+
+        //[ExtendedCategory("", "WorkExperience", ExtendedCategoryFeatures.UseTemplate /*| ExtendedCategoryFeatures.InsertUpdatePanel*/)]
+        //[XmlArrayItem("WorkExperience", IsNullable = false)]
+        //[JsonProperty("WorkExperience", Required = Required.DisallowNull, NullValueHandling = NullValueHandling.Ignore)]
+        [ConditionalVisible(nameof(ShowCountersList))]
+        [CollectionEditor(Features = CollectionFeature.Default & ~CollectionFeature.Insert)]
+        public ObservableCollection<Counter> Displays
+        {
+            get { return displays; }
+            set
+            {
+                if (displays != value)
+                {
+                    displays = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        [ActionButton(IconName.Undo, IconOptions.Normal, "CancelSettings.Warning", Features = ActionButtonFeatures.CloseSection | ActionButtonFeatures.CloseListItem | ActionButtonFeatures.SkipValidation)]
+        public virtual void Cancel(AriciePropertyEditorControl pe)
+        {
+            //navigationManager = pe.ParentModule.DependencyProvider.GetRequiredService<INavigationManager>();
+            pe.Page.Response.Redirect(Globals.NavigateURL());
+        }
+
+        [ActionButton(IconName.FloppyO, IconOptions.Normal, Features = ActionButtonFeatures.CloseSection | ActionButtonFeatures.CloseListItem)]
+        public virtual void Save(AriciePropertyEditorControl pe)
+        {
+            bool stopSaving = false;
+            try
+            {
+                DoSave(pe);
+            }
+            catch (Exception ex)
+            {
+                stopSaving = true;
+                pe.DisplayMessage($"{ex.Message}", DotNetNuke.UI.Skins.Controls.ModuleMessage.ModuleMessageType.RedError);
+            }
+            if (!stopSaving)
+            {
+                pe.Page.Response.Redirect(Globals.NavigateURL());
+                //pe.Page.Response.Redirect(navigationManager.NavigateURL());
+            }
+        }
+
+        public bool DoSave(AriciePropertyEditorControl pe)
+        {
+            //var key = E2CSettings.Instance.GetSmartFileKey(this.PortalId, this.UserId);
+            //UserInfo currentUser = UserController.Instance.GetUser(this.PortalId, this.UserId);
+            var currentPe = pe;
+            currentPe.ItemChanged = true;
+
+            var currentSettings = (ADSettings)currentPe.DataSource;
+            int i = 0;
+            foreach (Counter display in currentSettings.Displays)
+            {
+                if (!string.IsNullOrEmpty(display.condition))
+                {
+                    KeyValuePair<bool, string> validationResult = Controller.BusinessController.Instance.ValidateQueryCriterias(display.condition);
+                    if (!validationResult.Key)
+                    {
+                        throw new Exception($"{validationResult.Value} pour l'affichage n°{i} !");
+                    }
+                }
+                display.index = i;
+                i++;
+            }
+            //if (!string.IsNullOrEmpty(currentCounter.Current.Current.Salarie.Entreprise.Principal?.Presentation?.Name))
+            //{
+            //XmlSerializer xmls = new XmlSerializer(typeof(Counter));
+            //SettingsController.UpdateSettings(SettingsScope.ModuleSettings, pe.ParentModule.ModuleId, key, xmls.Serialize(currentCounter));
+            SettingsController.UpdateSettings(SettingsScope.ModuleSettings, pe.ParentModule.ModuleId, Controller.BusinessController.AricieDisplayKey, ReflectionHelper.Serialize(currentSettings).OuterXml);
+            //}
+
+            return true;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void RaisePropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+}

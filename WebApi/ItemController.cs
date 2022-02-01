@@ -1,13 +1,11 @@
-﻿using DotNetNuke.Security;
-using System;
-using System.Linq;
-using System.Net;
-using System.Collections.Generic;
+﻿using System.Net;
 using DotNetNuke.Web.Api;
 using System.Web.Http;
 using System.Net.Http;
 using Aricie.DigitalDisplays.Controller;
 using Aricie.DigitalDisplays.Components.Entities;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Aricie.DigitalDisplays.WebApi
 {
@@ -18,10 +16,10 @@ namespace Aricie.DigitalDisplays.WebApi
         [HttpGet]
         [ActionName("Number")]
         [AllowAnonymous]
-        public HttpResponseMessage GetNumber()
+        public HttpResponseMessage GetNumbers()
         {
-            Counter counter = BusinessController.Instance.GetQuantity(ActiveModule.ModuleID);
-            return Request.CreateResponse(HttpStatusCode.OK, counter);
+            ObservableCollection<Counter> counters = BusinessController.Instance.GetQuantities(ActiveModule.ModuleID);
+            return Request.CreateResponse(HttpStatusCode.OK, counters);
         }
 
         ///// <summary>

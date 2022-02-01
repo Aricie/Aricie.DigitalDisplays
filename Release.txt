@@ -1,0 +1,3 @@
+﻿<h3>Aricie.DigitalDisplays</h3>
+<hr/>
+<b>Version 1.0.0</b>

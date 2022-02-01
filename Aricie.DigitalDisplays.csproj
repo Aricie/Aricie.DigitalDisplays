@@ -57,6 +57,11 @@
       <HintPath>..\..\bin\DotNetNuke.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DotNetNuke.Abstractions, Version=9.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DotNetNuke.Web">
       <HintPath>..\..\bin\DotNetNuke.Web.dll</HintPath>
       <Private>False</Private>
@@ -65,7 +70,22 @@
       <HintPath>..\..\bin\DotNetNuke.Web.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DotNetNuke.WebUtility, Version=4.2.1.783, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\DotNetNuke.WebUtility.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\bin\Newtonsoft.Json.dll</HintPath>
@@ -109,6 +129,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Settings\ADSettings.cs" />
     <Compile Include="Components\Controllers\BusinessController.cs" />
     <Compile Include="Components\Entities\Counter.cs" />
     <Compile Include="Components\ModulePropertiesPropertyAccess.cs" />
@@ -124,6 +145,7 @@
     <Compile Include="WebApi\RouteMapper.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Aricie.DigitalDisplays.dnn" />
     <None Include="packages.config" />
     <Content Include="Content\ngDialog-theme-default.css" />
     <Content Include="Content\ngDialog.css" />
@@ -132,7 +154,9 @@
     <Content Include="js\ng-scripts\app.js" />
     <Content Include="js\ng-scripts\Controller\itemController.js" />
     <Content Include="js\ng-scripts\Service\itemService.js" />
+    <Content Include="js\ng-scripts\Templates\index.html" />
     <Content Include="module.css" />
+    <Content Include="Release.txt" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
@@ -150,9 +174,23 @@
     <Content Include="Settings.ascx" />
     <Content Include="View.html" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_LocalResources\View.html.resx" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\SharedResources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\View.html.fr-FR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\SharedResources.fr-FR.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Settings.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Settings.ascx.fr-FR.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
