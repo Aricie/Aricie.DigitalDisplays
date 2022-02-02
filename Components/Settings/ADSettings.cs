@@ -4,9 +4,11 @@ using Aricie.DNN.ComponentModel;
 using Aricie.DNN.Settings;
 using Aricie.DNN.UI.Attributes;
 using Aricie.DNN.UI.WebControls;
+using Aricie.DNN.UI.WebControls.EditControls;
 using Aricie.Services;
 //using DotNetNuke.Abstractions;
 using DotNetNuke.Common;
+using DotNetNuke.UI.WebControls;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -95,6 +97,12 @@ namespace Aricie.DigitalDisplays.Components.Settings
                 }
             }
         }
+        [ConditionalVisible(nameof(ShowCountDownSettings))]
+        [Editor(typeof(AricieDateEditControl), typeof(EditControl))]
+        public DateTime EditDate
+        {
+            get;set;
+        }
 
         [ActionButton(IconName.Undo, IconOptions.Normal, "CancelSettings.Warning", Features = ActionButtonFeatures.CloseSection | ActionButtonFeatures.CloseListItem | ActionButtonFeatures.SkipValidation)]
         public virtual void Cancel(AriciePropertyEditorControl pe)
@@ -155,7 +163,7 @@ namespace Aricie.DigitalDisplays.Components.Settings
             return true;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void RaisePropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string propertyName = null)
         {
