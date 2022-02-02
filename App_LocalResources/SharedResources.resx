@@ -1404,4 +1404,10 @@
   <data name="Counter_icon2.Text" xml:space="preserve">
     <value>Icon Selector</value>
   </data>
+  <data name="ADSettings_EditDate.Help" xml:space="preserve">
+    <value>Target date for the countdown</value>
+  </data>
+  <data name="ADSettings_EditDate.Text" xml:space="preserve">
+    <value>Target date</value>
+  </data>
 </root>

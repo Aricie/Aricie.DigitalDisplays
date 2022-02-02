@@ -126,6 +126,12 @@
   <data name="ADSettings_DisplayMode.Text" xml:space="preserve">
     <value>Mode d'affichage</value>
   </data>
+  <data name="ADSettings_EditDate.Help" xml:space="preserve">
+    <value>Date cible pour le compte à rebours</value>
+  </data>
+  <data name="ADSettings_EditDate.Text" xml:space="preserve">
+    <value>Date cible</value>
+  </data>
   <data name="ADSettings_Save.Text" xml:space="preserve">
     <value>Enregistrer</value>
   </data>
