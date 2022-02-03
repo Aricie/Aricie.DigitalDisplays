@@ -151,10 +151,12 @@
     <Content Include="Content\ngDialog.css" />
     <Content Include="Content\ngDialog.min.css" />
     <Content Include="css\ngProgress.css" />
+    <Content Include="js\moment.min.js" />
     <Content Include="js\ng-scripts\app.js" />
     <Content Include="js\ng-scripts\Controller\itemController.js" />
     <Content Include="js\ng-scripts\Service\itemService.js" />
     <Content Include="js\ng-scripts\Templates\index.html" />
+    <Content Include="js\ng-scripts\Templates\itemForm.html" />
     <Content Include="module.css" />
     <Content Include="Release.txt" />
     <Content Include="Scripts\angular-mocks.js" />
