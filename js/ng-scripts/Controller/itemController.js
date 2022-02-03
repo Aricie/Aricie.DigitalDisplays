@@ -65,7 +65,8 @@
             }
             else if (vm.settings["Aricie.Displays"].DisplayMode == 1) {
                 var deadline = new Date(Date.parse(vm.settings["Aricie.Displays"].EditDate));
-                $scope.CountDown.initializeClock(deadline);
+                vm.CountDown.initializeClock(deadline, vm.ModuleId);
+                $scope.progressbar.complete();
             }
             //}
         };
@@ -100,88 +101,6 @@
             });
         };
 
-        function createUpdateItem(form) {
-            vm.invalidSubmitAttempt = false;
-            if (form.$invalid) {
-                vm.invalidSubmitAttempt = true;
-                return;
-            }
-
-            if (vm.Item.ItemId > 0) {
-                itemService.updateItem(vm.Item)
-                    .success(function(response) {
-                        if (vm.EditIndex >= 0) {
-                            vm.Items[vm.EditIndex] = vm.Item;
-                        }
-                    })
-                    .catch(function(errData) {
-                        $log.error('failure saving item', errData);
-                    });
-            } else {
-                itemService.newItem(vm.Item)
-                    .success(function (response) {
-                        if (response.ItemId > 0) {
-                            vm.Items.push(response);
-                        }
-                    })
-                    .error(function (errData) {
-                        $log.error('failure saving new item', errData);
-                    });
-            }
-            ngDialog.close();
-        };
-
-        function deleteItem(item, idx) {
-            if (confirm('Are you sure to delete "' + item.Title + '" ?')) {
-                itemService.deleteItem(item)
-                    .success(function (response) {
-                        vm.Items.splice(idx, 1);
-                    })
-                    .error(function (errData) {
-                        $log.error('failure deleting item', errData);
-                    });
-            }
-        };
-
-        function showAdd() {
-            vm.reset();
-            vm.AddEditTitle = "Add Item";
-            ngDialog.open({
-                template: jsFileLocation + 'Templates/itemForm.html',
-                className: 'ngdialog-theme-default',
-                scope: $scope
-            });
-        };
-
-        function showEdit(item, idx) {
-            vm.Item = angular.copy(item);
-            vm.EditIndex = idx;
-            vm.AddEditTitle = "Edit Item: #" + item.ItemId;
-            ngDialog.open({
-                template: jsFileLocation + 'Templates/itemForm.html',
-                className: 'ngdialog-theme-default',
-                scope: $scope
-            });
-        };
-
-        //function resetItem() {
-        //    vm.Item = {
-        //        ItemId: 0,
-        //        ModuleId: vm.ModuleId,
-        //        Title: '',
-        //        Description: '',
-        //        AssignedUserId: ''
-        //    };
-        //};
-
-        function userSelected() {
-            for (var i = 0; i < vm.UserList.length; i++) {
-                if (vm.UserList[i].id == vm.Item.AssignedUserId) {
-                    vm.Item.AssignedUserName = vm.UserList[i].text;
-                }
-            }
-        };
-
         function sortStop(e, ui) {
             var sortItems = [];
             for (var index in vm.Items) {
@@ -207,8 +126,9 @@
                     return false;
                 });
         };
-        $scope.CountDown = {
-            months:0,
+
+        vm.CountDown = {
+            months: 0,
             days: 0,
             hours: 0,
             minutes: 0,
@@ -218,13 +138,13 @@
                 var end = moment(new Date())
                 var t = moment.duration(start.diff(end)).asMilliseconds();
                 var seconds = moment.duration(start.diff(end)).seconds();
-                var minutes = moment.duration(start.diff(end)).minutes() ;
+                var minutes = moment.duration(start.diff(end)).minutes();
                 var hours = moment.duration(start.diff(end)).hours();
                 var days = moment.duration(start.diff(end)).days();
                 var months = moment.duration(start.diff(end)).months()
                 return {
                     'total': t,
-                    'months' : months,
+                    'months': months,
                     'days': days,
                     'hours': hours,
                     'minutes': minutes,
@@ -232,26 +152,26 @@
                 };
             },
 
-            initializeClock: function (endtime) {
+            initializeClock: function (endtime, moduleId) {
                 function updateClock() {
-                    var t = $scope.CountDown.getTimeRemaining(endtime);
-                    $scope.CountDown.months = t.months;
-                    $scope.CountDown.days = t.days;
-                    $scope.CountDown.hours = t.hours;
-                    $scope.CountDown.minutes = t.minutes;
-                    $scope.CountDown.seconds = t.seconds;
+                    var t = vm.CountDown.getTimeRemaining(endtime);
+                    vm.CountDown.months = t.months;
+                    vm.CountDown.days = t.days;
+                    vm.CountDown.hours = t.hours;
+                    vm.CountDown.minutes = t.minutes;
+                    vm.CountDown.seconds = t.seconds;
 
                     if (t.total <= 0) {
                         $interval.cancel(timeinterval);
                     }
-                }
+                };
 
                 updateClock();
                 var timeinterval = $interval(updateClock, 1000);
             }
-        }
+        };
 
-        
+        //$scope.CountDown = CountDown;
 
         getDisplays();
     };

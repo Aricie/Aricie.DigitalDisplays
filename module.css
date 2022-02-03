@@ -53,27 +53,27 @@
 
 /* Countdown*/
 #countdown {
-    font-family: sans-serif;
-    color: #fff;
     display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f39200;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 30px;
     font-weight: 100;
     text-align: center;
-    font-size: 30px;
-    border-radius: 30px;
-    background: #f39200;
 }
 
     #countdown > div {
-        padding: 10px;
-        border-radius: 8px;
-       
         display: inline-block;
+        padding-left: 2px;
+        padding-right: 2px;
     }
 
     #countdown div > span {
-       /* border-radius: 50%;
-        background: #f39200;*/
         display: inline-block;
+        min-width: 35px;
+        text-align: right;
     }
 
     #countdown .label {

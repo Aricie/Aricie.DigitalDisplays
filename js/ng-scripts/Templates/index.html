@@ -13,26 +13,12 @@
 
         </div>
         <div class="mx-auto w-auto" ng-if="vm.settings['Aricie.Displays'].DisplayMode == 1">
-            <div id="countdown" class="">
-                <div ng-show="CountDown.months > 0">
-                    <span>{{ CountDown.months }}</span>
-                    <div class="label">Mois</div>
-                </div>
-                <div ng-show="CountDown.months > 0 || CountDown.days > 0">
-                    <span>{{ CountDown.days }}</span>
-                    <div class="label">Jours</div>
-                </div>
-                <div>
-                    <span>{{ CountDown.hours }}</span>
-                    <div class="label">Heures</div>
-                </div>
-                <div>
-                    <span>{{ CountDown.minutes }}</span>
-                    <div class="label">Minutes</div>
-                </div>
-                <div>
-                    <span>{{ CountDown.seconds }}</span>
-                    <div class="label">Secondes</div>
+            <div id="countdown">
+                <div ng-show="vm.CountDown.months > 0"><span>{{ vm.CountDown.months }}</span><div class="label">Mois</div>
+                </div><div ng-show="vm.CountDown.months > 0 || vm.CountDown.days > 0"><span>{{ vm.CountDown.days }}</span><div class="label">Jours</div>
+                </div><div><span>{{ vm.CountDown.hours }}</span><div class="label">Heures</div>
+                </div><div><span>{{ vm.CountDown.minutes }}</span><div class="label">Minutes</div>
+                </div><div><span>{{ vm.CountDown.seconds }}</span><div class="label">Secondes</div>
                 </div>
             </div>
         </div>
