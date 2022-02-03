@@ -50,3 +50,33 @@
         counter-increment: count 10;
     }
 }*/
+
+/* Countdown*/
+#countdown {
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 30px;
+    background: #f39200;
+}
+
+    #countdown > div {
+        padding: 10px;
+        border-radius: 8px;
+       
+        display: inline-block;
+    }
+
+    #countdown div > span {
+       /* border-radius: 50%;
+        background: #f39200;*/
+        display: inline-block;
+    }
+
+    #countdown .label {
+        padding-top: 5px;
+        font-size: 16px;
+    }

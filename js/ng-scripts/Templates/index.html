@@ -1,6 +1,6 @@
 ﻿<div class="angularmodule">
     <div class="edsBB__row row">
-        <div class="edsBB__col col-sm-12 edsBB__droppable ui-droppable" data-col="12">
+        <div ng-if="vm.settings['Aricie.Displays'].DisplayMode == 0" class="edsBB__col col-sm-12 edsBB__droppable ui-droppable" data-col="12">
             <div class="edsBB_droppableItem" data-assetid="Counters_CountersStyle4_group" data-comment="Do not edit or remove this div">
                 <div class="row py-5 text-center eds_customFont eds_whiteColor" data-features="margin,padding">
                     <div class="col-md-6 col-lg-3" ng-repeat="display in vm.settings['Aricie.Displays'].Displays">
@@ -8,6 +8,31 @@
                         <div class="display-4 font-weight-bold"><span class="counter full-visible" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; font-size: 56px; font-family: Exo;"></span><span style="font-family: Exo; font-size: 56px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700;" ng-if="display.showPlus">+</span><br></div>
                         <h4>{{display.label}}</h4>
                     </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mx-auto w-auto" ng-if="vm.settings['Aricie.Displays'].DisplayMode == 1">
+            <div id="countdown" class="">
+                <div ng-show="CountDown.months > 0">
+                    <span>{{ CountDown.months }}</span>
+                    <div class="label">Mois</div>
+                </div>
+                <div ng-show="CountDown.months > 0 || CountDown.days > 0">
+                    <span>{{ CountDown.days }}</span>
+                    <div class="label">Jours</div>
+                </div>
+                <div>
+                    <span>{{ CountDown.hours }}</span>
+                    <div class="label">Heures</div>
+                </div>
+                <div>
+                    <span>{{ CountDown.minutes }}</span>
+                    <div class="label">Minutes</div>
+                </div>
+                <div>
+                    <span>{{ CountDown.seconds }}</span>
+                    <div class="label">Secondes</div>
                 </div>
             </div>
         </div>
