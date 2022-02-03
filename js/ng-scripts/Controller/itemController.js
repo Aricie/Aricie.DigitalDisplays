@@ -35,40 +35,36 @@
 			jsFileLocation = jsFileLocation.substr(0, jsFileLocation.indexOf('?'));
 		}
 
-        //resetItem();
- 
         function getDisplays() {
-            //ngProgress.setColor('red');
-            //ngProgress.start();
             $scope.progressbar.setColor('red');
             $scope.progressbar.start();
-            //for (i = 0; i < vm.settings["Aricie.Displays"].Displays.length; i++) {
-            if (vm.settings["Aricie.Displays"].DisplayMode == 0) {
-                itemService.getNumbers()
-                    .then(function (response) {
-                        vm.Counters = response.data;
-                        //for (i = 0; i < vm.settings["Aricie.Displays"].Displays.length; i++) {
-                        var i = 0;
-                        $(".counter").each(function () {
-                            $(this).text(vm.Counters[i].value);
-                            $(this).addClass("eds_counter");
-                            i = i + 1;
-                        });
-                        $scope.progressbar.complete();
+            if (vm.settings != null && vm.settings["Aricie.Displays"] != null) {
+                if (vm.settings["Aricie.Displays"].DisplayMode == 0) {
+                    itemService.getNumbers()
+                        .then(function (response) {
+                            vm.Counters = response.data;
+                            //for (i = 0; i < vm.settings["Aricie.Displays"].Displays.length; i++) {
+                            var i = 0;
+                            $(".counter").each(function () {
+                                $(this).text(vm.Counters[i].value);
+                                $(this).addClass("eds_counter");
+                                i = i + 1;
+                            });
+                            $scope.progressbar.complete();
 
-                        animateCounter();
-                    })
-                    .catch(function (errData) {
-                        $log.error('failure loading items', errData);
-                        $scope.progressbar.complete();
-                    });
+                            animateCounter();
+                        })
+                        .catch(function (errData) {
+                            $log.error('failure loading items', errData);
+                            $scope.progressbar.complete();
+                        });
+                }
+                else if (vm.settings["Aricie.Displays"].DisplayMode == 1) {
+                    var deadline = new Date(Date.parse(vm.settings["Aricie.Displays"].EditDate));
+                    vm.CountDown.initializeClock(deadline, vm.ModuleId);
+                    $scope.progressbar.complete();
+                }
             }
-            else if (vm.settings["Aricie.Displays"].DisplayMode == 1) {
-                var deadline = new Date(Date.parse(vm.settings["Aricie.Displays"].EditDate));
-                vm.CountDown.initializeClock(deadline, vm.ModuleId);
-                $scope.progressbar.complete();
-            }
-            //}
         };
 
         function animateCounter() {
@@ -170,8 +166,6 @@
                 var timeinterval = $interval(updateClock, 1000);
             }
         };
-
-        //$scope.CountDown = CountDown;
 
         getDisplays();
     };

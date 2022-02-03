@@ -156,7 +156,6 @@
     <Content Include="js\ng-scripts\Controller\itemController.js" />
     <Content Include="js\ng-scripts\Service\itemService.js" />
     <Content Include="js\ng-scripts\Templates\index.html" />
-    <Content Include="js\ng-scripts\Templates\itemForm.html" />
     <Content Include="module.css" />
     <Content Include="Release.txt" />
     <Content Include="Scripts\angular-mocks.js" />

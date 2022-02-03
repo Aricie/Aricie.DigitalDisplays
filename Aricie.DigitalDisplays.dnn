@@ -48,7 +48,7 @@
                 <controlType>Edit</controlType>
                 <iconFile />
                 <helpUrl />
-                <supportsPopUps>True</supportsPopUps>
+                <supportsPopUps>False</supportsPopUps>
               </moduleControl>
             </moduleControls>
           </moduleDefinition>
@@ -102,6 +102,10 @@
         <file>
           <path>css</path>
           <name>ngProgress.css</name>
+        </file>
+        <file>
+          <path>js</path>
+          <name>moment.min.js</name>
         </file>
         <file>
           <path>js\ng-scripts</path>
