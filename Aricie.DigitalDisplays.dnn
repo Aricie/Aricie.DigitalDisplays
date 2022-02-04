@@ -77,7 +77,23 @@
         <basePath>DesktopModules\Aricie.DigitalDisplays</basePath>
         <file>
           <path>App_LocalResources</path>
+          <name>Settings.ascx.fr-FR.resx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
+          <name>Settings.ascx.resx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
+          <name>SharedResources.fr-FR.resx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
           <name>SharedResources.resx</name>
+        </file>
+        <file>
+          <path>App_LocalResources</path>
+          <name>View.html.fr-FR.resx</name>
         </file>
         <file>
           <path>App_LocalResources</path>
