@@ -70,7 +70,7 @@ namespace Aricie.DigitalDisplays.Controller
 
         public ADSettings GetSettings(int moduleID)
         {
-            Hashtable settings = null;
+            Dictionary<string, string> settings = null;
             if (!string.IsNullOrEmpty(SettingsController.FetchFromModuleSettings(SettingsScope.ModuleSettings, moduleID, AricieDisplayKey, ref settings)))
             {
                 ADSettings result = ReflectionHelper.Deserialize<ADSettings>(SettingsController.FetchFromModuleSettings(SettingsScope.ModuleSettings, moduleID, AricieDisplayKey, ref settings));
