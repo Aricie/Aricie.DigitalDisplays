@@ -126,12 +126,10 @@ namespace Aricie.DigitalDisplays.Controller
                 bool operatorRead = false;
                 //bool part2read = false;
                 bool logicalOperatorRead = false;
-                List<string> comparators = new List<string> { ">", "<", "=", "!=", ">=", "<=", "like" };
-                //List<string> separators = new List<string> { ">", "<", "=", "!=", ">=", "<=", " " };
+                List<string> comparators = new List<string> { ">", "<", "=", "<>", ">=", "<=", "like", "is", "is not", "in" };
 
                 string previousPart = "";
 
-                //foreach (string part in condition.Split(separators.ToArray(), StringSplitOptions.RemoveEmptyEntries))
                 foreach (string part in condition.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries))
                 {
                     if (part != "and" && part != "or")
