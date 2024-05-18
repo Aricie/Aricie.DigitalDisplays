@@ -2,7 +2,7 @@
     <div class="edsBB__row row">
         <div ng-if="vm.settings['Aricie.Displays'].DisplayMode == 0" class="edsBB__col col-sm-12 edsBB__droppable ui-droppable" data-col="12">
             <div class="edsBB_droppableItem" data-assetid="Counters_CountersStyle4_group" data-comment="Do not edit or remove this div">
-                <div class="row py-5 text-center eds_customFont eds_whiteColor" data-features="margin,padding">
+                <div class="row py-5 text-center eds_customFont" data-features="margin,padding">
                     <div class="col-md-6 col-lg-3" ng-repeat="display in vm.settings['Aricie.Displays'].Displays">
                         <span class="edsBB_fontIcon"><i class="fas fa-folder-open fa-5x" ng-if="display.icon==null"></i><i class="{{display.icon}} fa-5x" ng-if="display.icon!=null"></i></span>
                         <div class="display-4 font-weight-bold"><span class="counter full-visible" style="font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; font-size: 56px; font-family: Exo;"></span><span style="font-family: Exo; font-size: 56px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700;" ng-if="display.showPlus">+</span><br></div>
