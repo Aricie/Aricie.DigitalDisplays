@@ -4,10 +4,10 @@
   <description />
   <iconFile>/Images/icon_extensions_32px.png</iconFile>
   <owner>
-    <name>Aricie</name>
-    <organization>Aricie</organization>
-    <url>https://aricie.com</url>
-    <email>support@aricie.fr</email>
+    <name>Aricie Conseil</name>
+    <organization>Aricie Conseil</organization>
+    <url>https://www.aricie-conseil.fr</url>
+    <email>support@aricie-conseil.fr</email>
   </owner>
   <license />
   <releaseNotes src="Release.txt"></releaseNotes>
